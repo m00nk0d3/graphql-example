@@ -8,8 +8,10 @@ const {loadFilesSync} = require('@graphql-tools/load-files');
 const products = require('./products/products.model');
 const orders = require('./orders/orders.model');
 
-const typesArray = loadFilesSync(path.join(__dirname, './**/*.graphql'), {allowEmptyFiles: true}) 
-
+const typesArray = loadFilesSync('**/*', {
+    extensions: ['graphql'],
+  });
+  
 const schema = makeExecutableSchema({
     typeDefs: typesArray
 })

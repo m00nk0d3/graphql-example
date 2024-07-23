@@ -1,4 +1,4 @@
-module.exports =[
+const orders = [
     {
         id: '123',
         date: '01/01/2020',
@@ -7,7 +7,7 @@ module.exports =[
                 product: {
                     id: 'redshoes',
                     description: 'Red shoes',
-                    price: 9.99, 
+                    price: 9.99,
                 },
                 quantity: 2
             },
@@ -15,7 +15,7 @@ module.exports =[
                 product: {
                     id: 'bluejeans',
                     description: 'Blue jeans',
-                    price: 19.99, 
+                    price: 19.99,
                 },
                 quantity: 1
             }
@@ -23,3 +23,9 @@ module.exports =[
         subtotal: 29.98
     }
 ]
+function getAllOrders() {
+    return orders
+}
+module.exports = {
+    getAllOrders
+}
